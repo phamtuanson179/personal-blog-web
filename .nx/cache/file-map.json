@@ -3,10 +3,12 @@
   "nxVersion": "17.2.8",
   "deps": {
     "@angular/animations": "^17.2.0",
+    "@angular/cdk": "^17.2.1",
     "@angular/common": "^17.2.0",
     "@angular/compiler": "^17.2.0",
     "@angular/core": "^17.2.0",
     "@angular/forms": "^17.2.0",
+    "@angular/material": "^17.2.1",
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/platform-server": "^17.2.0",
@@ -41,6 +43,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
     "typescript": "~5.3.2"
   },
   "pathMappings": {},
@@ -53,8 +56,12 @@
         "hash": "13146529205052392001"
       },
       {
+        "file": ".eslintignore",
+        "hash": "10822249652313919421"
+      },
+      {
         "file": ".eslintrc.json",
-        "hash": "5971771923854552444"
+        "hash": "4737467650314927570"
       },
       {
         "file": ".gitignore",
@@ -62,7 +69,7 @@
       },
       {
         "file": ".husky/pre-commit",
-        "hash": "10660009416527796471"
+        "hash": "4373922498318505794"
       },
       {
         "file": ".prettierrc.json",
@@ -90,19 +97,19 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "14719838717499026510"
+        "hash": "988908218134127771"
       },
       {
         "file": "package.json",
-        "hash": "11299178047514832626"
+        "hash": "8613083278880693930"
       },
       {
         "file": "server.ts",
-        "hash": "10116529794973885211"
+        "hash": "7713808127824314998"
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "16434736304578165321"
+        "hash": "9770150128809396430"
       },
       {
         "file": "src/app/app.component.scss",
@@ -150,7 +157,11 @@
       },
       {
         "file": "src/styles.scss",
-        "hash": "5195668842064076916"
+        "hash": "9720836743147608608"
+      },
+      {
+        "file": "tailwind.config.js",
+        "hash": "17289872497737840438"
       },
       {
         "file": "tsconfig.app.json",

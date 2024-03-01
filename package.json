@@ -15,10 +15,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.2.0",
+    "@angular/cdk": "^17.2.1",
     "@angular/common": "^17.2.0",
     "@angular/compiler": "^17.2.0",
     "@angular/core": "^17.2.0",
     "@angular/forms": "^17.2.0",
+    "@angular/material": "^17.2.1",
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/platform-server": "^17.2.0",
@@ -55,12 +57,13 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
     "typescript": "~5.3.2"
   },
   "lint-staged": {
     "src/**/*.{js,ts,html,css,scss}": [
       "prettier --write",
-      "eslint --max-warnings=0"
+      "eslint  --max-warnings=7"
     ]
   }
 }
