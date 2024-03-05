@@ -1,15 +1,14 @@
 <input
-  [type]="type"
+  [type]="type()"
   id="first_name"
-  [ngClass]="ngClass"
-  [placeholder]="placeholder"
-  [disabled]="_isDisabled"
-  [(ngModel)]="_value"
-  #input="ngModel"
-  required
+  [ngClass]="ngClass()"
+  [placeholder]="placeholder()"
+  (input)="onChangeInput($event)"
+  [name]="name()"
+  [formControl]="control"
 />
 
-@if (input.invalid && input.touched && input.errors) {
+@if (control.invalid && control.touched && control.errors) {
   <p class="mt-2 text-sm text-red-600 dark:text-red-500">
     <ng-content select="errorMessages"></ng-content>
   </p>

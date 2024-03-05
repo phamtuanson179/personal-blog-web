@@ -1,17 +1,19 @@
 import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
-  effect,
   forwardRef,
   input,
 } from "@angular/core";
 import {
   AbstractControl,
   ControlValueAccessor,
+  FormControl,
   FormsModule,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
+  ReactiveFormsModule,
   ValidationErrors,
   Validator,
 } from "@angular/forms";
@@ -19,7 +21,7 @@ import {
 @Component({
   selector: "app-input",
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./input.component.html",
   styleUrl: "./input.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -27,38 +29,34 @@ import {
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => InputComponent),
+      multi: true,
     },
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => InputComponent),
+      multi: true,
     },
   ],
 })
 export class InputComponent implements ControlValueAccessor, Validator {
   type = input<INPUT_TYPE>(INPUT_TYPE.text);
+  name = input<string>("");
   placeholder = input<string>("");
   ngClass = input<string | object>("");
-  disabled = input<boolean>(false);
-  required = input<boolean>(false);
+
+  control = new FormControl<ValueType>("");
 
   onChange!: (value: ValueType) => void;
   onTouched!: () => void;
   onValidatorChange!: () => void;
 
-  protected _isDisabled = false;
-  protected _value: ValueType = null;
-
-  constructor() {
-    effect(() => {
-      this._isDisabled = this.disabled();
-    });
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   //override
   validate(
     control: AbstractControl<unknown, unknown>
   ): ValidationErrors | null {
-    return control.errors;
+    return control?.errors;
   }
 
   //override
@@ -68,7 +66,7 @@ export class InputComponent implements ControlValueAccessor, Validator {
 
   //override
   writeValue(value: ValueType): void {
-    this._value = value;
+    this.control.setValue(value);
   }
 
   //override
@@ -82,8 +80,14 @@ export class InputComponent implements ControlValueAccessor, Validator {
   }
 
   //override
-  setDisabledState?(isDisabled: boolean): void {
-    this._isDisabled = isDisabled;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  setDisabledState?(_: boolean): void {}
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onChangeInput(e: any) {
+    const value = e?.target.value;
+    this.control.setValue(value);
+    this.onChange(value);
   }
 }
 
