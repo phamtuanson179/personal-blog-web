@@ -15,6 +15,7 @@
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.0",
     "express": "^4.18.2",
+    "json-server": "^1.0.0-alpha.23",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3",
@@ -172,7 +173,7 @@
       },
       {
         "file": "src/app/pages/home/home.component.html",
-        "hash": "3244421341483603138"
+        "hash": "11974313054253891603"
       },
       {
         "file": "src/app/pages/home/home.component.scss",
@@ -184,7 +185,7 @@
       },
       {
         "file": "src/app/pages/home/home.component.ts",
-        "hash": "3637862706804057844"
+        "hash": "1350070555083371466"
       },
       {
         "file": "src/app/shared/containers/default-footer/default-footer.component.html",
@@ -288,7 +289,7 @@
       },
       {
         "file": "src/app/shared/ui/input/input.component.html",
-        "hash": "9541684841715744616"
+        "hash": "1676263298361785450"
       },
       {
         "file": "src/app/shared/ui/input/input.component.scss",
@@ -296,11 +297,11 @@
       },
       {
         "file": "src/app/shared/ui/input/input.component.spec.ts",
-        "hash": "2618635915767083690"
+        "hash": "1293246009414293141"
       },
       {
         "file": "src/app/shared/ui/input/input.component.ts",
-        "hash": "17947427602262151123"
+        "hash": "17244905631339975965"
       },
       {
         "file": "src/app/shared/ui/loading/loading.component.html",
@@ -336,7 +337,7 @@
       },
       {
         "file": "src/app/shared/ui/select/select.component.html",
-        "hash": "5279552300020856442"
+        "hash": "13311740074835898786"
       },
       {
         "file": "src/app/shared/ui/select/select.component.scss",
@@ -348,7 +349,7 @@
       },
       {
         "file": "src/app/shared/ui/select/select.component.ts",
-        "hash": "9060748238647392838"
+        "hash": "110350494812526366"
       },
       {
         "file": "src/app/shared/ui/skeleton/skeleton.component.html",
@@ -468,7 +469,7 @@
       },
       {
         "file": "src/styles.scss",
-        "hash": "3140386504517610626"
+        "hash": "13961423563138302013"
       },
       {
         "file": "tailwind.config.js",
@@ -480,7 +481,7 @@
       },
       {
         "file": "tsconfig.json",
-        "hash": "18442166791811020788"
+        "hash": "3906072716359332791"
       },
       {
         "file": "tsconfig.spec.json",

@@ -1,0 +1,8 @@
+{
+  "categories": [
+    { "id": "1", "name": "Frontend" },
+    { "id": "2", "name": "Backend" },
+    { "id": "3", "name": "Book" },
+    { "id": "4", "name": "Photography" }
+  ]
+}

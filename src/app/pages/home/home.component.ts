@@ -1,19 +1,10 @@
-import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
-import { InputComponent } from "src/app/shared/ui/input/input.component";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [InputComponent, FormsModule, ReactiveFormsModule],
+  imports: [],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })
-export class HomeComponent implements AfterViewInit {
-  @ViewChild("input") input!: InputComponent;
-  test = "";
-
-  ngAfterViewInit(): void {
-    this.input.control.addValidators(Validators.required);
-  }
-}
+export class HomeComponent {}

@@ -87,7 +87,7 @@ export class InputComponent implements ControlValueAccessor, Validator {
   onChangeInput(e: any) {
     const value = e?.target.value;
     this.control.setValue(value);
-    this.onChange(value);
+    this?.onChange(value);
   }
 }
 
