@@ -14,8 +14,8 @@ export class CategoryStoreService {
   }
 
   private _fetch() {
-    this._categoryFacade.get().subscribe((res) => {
-      console.log({ res });
+    this._categoryFacade.get().subscribe((res: Category[]) => {
+      this.categories.set(res);
     });
   }
 }

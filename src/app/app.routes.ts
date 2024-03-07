@@ -1,12 +1,11 @@
 import { Routes } from "@angular/router";
+import { DefaultComponent } from "@pages/default/default.component";
+import { defaultRoutes } from "@pages/default/default.router";
 
 export const routes: Routes = [
   {
     path: "",
-    loadComponent: () =>
-      import("./pages/default/default.component").then(
-        (c) => c.DefaultComponent
-      ),
-    children: [],
+    component: DefaultComponent,
+    children: defaultRoutes,
   },
 ];

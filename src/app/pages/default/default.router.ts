@@ -1,14 +1,23 @@
 import { Routes } from "@angular/router";
 
-export const categoryRouters: Routes = [
+export const defaultRoutes: Routes = [
   {
     path: "",
-    loadComponent: () =>
-      import("../home/home.component").then((c) => c.HomeComponent),
+    redirectTo: "home",
+    pathMatch: "full",
   },
-  // {
-  //   path: "categories/:id",
-  //   loadComponent: () =>
-  //     import("../home/home.component").then((c) => c.HomeComponent),
-  // },
+  {
+    path: "home",
+    loadComponent: () =>
+      import("../categories/categories.component").then(
+        (c) => c.CategoriesComponent
+      ),
+  },
+  {
+    path: "categories/:categoryId",
+    loadComponent: () =>
+      import("../categories/categories.component").then(
+        (c) => c.CategoriesComponent
+      ),
+  },
 ];

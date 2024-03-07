@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, effect, inject } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { Category } from "src/app/features/category/interfaces/category.interface";
+import { CategoryStoreService } from "src/app/features/category/services/category-store.service";
 
 @Component({
   selector: "app-default-header",
@@ -9,11 +11,12 @@ import { RouterModule } from "@angular/router";
   styleUrl: "./default-header.component.scss",
 })
 export class DefaultHeaderComponent {
-  public MENUS = MENUS;
-}
+  private _categoriesStore = inject(CategoryStoreService);
+  protected categories: Category[] = [];
 
-export const MENUS: { view: string; url: string }[] = [
-  { url: "/", view: "Home" },
-  { url: "/front-end", view: "Front End" },
-  { url: "/book", view: "Book" },
-];
+  constructor() {
+    effect(() => {
+      this.categories = this._categoriesStore.categories();
+    });
+  }
+}
