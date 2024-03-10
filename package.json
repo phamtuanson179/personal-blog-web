@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:personal-blog-web": "node dist/personal-blog-web/server/server.mjs",
+    "server:fake": "npx json-server src/assets/fake-db.json",
     "lint": "ng lint",
     "lint:fix": "prettier --write src && ng lint --fix",
     "prepare": "husky install"

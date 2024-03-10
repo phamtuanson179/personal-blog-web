@@ -1,8 +1,17 @@
 {
   "categories": [
-    { "id": "1", "name": "Frontend" },
-    { "id": "2", "name": "Backend" },
-    { "id": "3", "name": "Book" },
-    { "id": "4", "name": "Photography" }
+    { "id": "1", "name": "Frontend", "description": "I'm Frontend" },
+    { "id": "2", "name": "Backend", "description": "I'm Backend" },
+    { "id": "3", "name": "Book", "description": "I'm Book" },
+    { "id": "4", "name": "Photography", "description": "I'm Photography" }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "name": "Change Detection trong Angular",
+      "summary": "Chỉ rõ cách hoạt động của Change Detection trong Angular",
+      "content": "",
+      "categoryIds": ["1"]
+    }
   ]
 }

@@ -1,5 +1,6 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
+import { Blog } from "@features/blog/interfaces/blog.interface";
 import { BlogFilter } from "src/app/features/blog/interfaces/blog-filter.interface";
 
 const URL = "blogs";
@@ -8,9 +9,9 @@ const URL = "blogs";
 export class BlogApiService {
   private _http = inject(HttpClient);
 
-  get(params: BlogFilter) {
-    const _params = new HttpParams(params);
-    return this._http.get(URL, { params: _params });
+  get(params?: BlogFilter) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return this._http.get<Blog[]>(URL, { params: params as any });
   }
 
   getById(params?: { id: string }) {

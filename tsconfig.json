@@ -19,11 +19,18 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": ["ES2022", "dom", "es5", "es6", "dom", "dom.iterable"],
+    "lib": ["ES2022", "dom", "es5", "es6", "dom.iterable"],
     "baseUrl": "./",
     "paths": {
       "@pages/*": ["src/app/pages/*"],
-      "@components/*": ["src/app/shared/ui/*"]
+      "@components/*": ["src/app/shared/ui/*"],
+      "@pipes/*": ["src/app/shared/pipes/*"],
+      "@directives/*": ["src/app/shared/directives/*"],
+      "@containers/*": ["src/app/shared/containers/*"],
+      "@features/*": ["src/app/features/*"],
+      "@core/*": ["src/app/core/*"],
+      "@assets/*": ["src/assets/*"],
+      "@env/*": ["src/environment/*"]
     }
   },
   "angularCompilerOptions": {

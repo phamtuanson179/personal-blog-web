@@ -1,1 +1,7 @@
-<p>blog-cards works!</p>
+<section>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    @for (blog of blogs(); track $index) {
+      <app-blog-card [blog]="blog"></app-blog-card>
+    }
+  </div>
+</section>

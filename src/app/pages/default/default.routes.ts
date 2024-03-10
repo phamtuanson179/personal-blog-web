@@ -9,15 +9,15 @@ export const defaultRoutes: Routes = [
   {
     path: "home",
     loadComponent: () =>
-      import("../categories/categories.component").then(
-        (c) => c.CategoriesComponent
+      import("../categories-page/categories-page.component").then(
+        (c) => c.CategoriesPageComponent
       ),
   },
   {
     path: "categories/:categoryId",
     loadComponent: () =>
-      import("../categories/categories.component").then(
-        (c) => c.CategoriesComponent
+      import("../categories-page/categories-page.component").then(
+        (c) => c.CategoriesPageComponent
       ),
   },
 ];

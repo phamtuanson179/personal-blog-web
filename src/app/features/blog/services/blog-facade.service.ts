@@ -11,7 +11,7 @@ export class BlogFacadeService {
   private _blogApiService = inject(BlogApiService);
   private _categoryFacadeService = inject(CategoryFacadeService);
 
-  get(params: BlogFilter) {
+  get(params?: BlogFilter) {
     return this._blogApiService.get(params);
   }
 

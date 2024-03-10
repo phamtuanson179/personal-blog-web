@@ -71,8 +71,6 @@ export class SelectComponent implements ControlValueAccessor, Validator {
 
   //override
   registerOnChange(fn: (value: ValueType) => void): void {
-    console.log({ fn });
-
     this.onChange = fn;
   }
 

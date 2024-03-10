@@ -1,1 +1,3 @@
-export interface BlogFilter {}
+export interface BlogFilter {
+  categoryIds: string[];
+}
