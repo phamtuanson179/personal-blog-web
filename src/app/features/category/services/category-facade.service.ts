@@ -13,4 +13,8 @@ export class CategoryFacadeService {
   getCategoryById(id: string, categories: Category[]) {
     return categories.find((i) => i.id == id);
   }
+
+  // appendHomeCategoryToCategories(categories: Category[]) {
+
+  // }
 }
