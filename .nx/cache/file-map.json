@@ -54,6 +54,27 @@
     ],
     "@components/*": [
       "src/app/shared/ui/*"
+    ],
+    "@pipes/*": [
+      "src/app/shared/pipes/*"
+    ],
+    "@directives/*": [
+      "src/app/shared/directives/*"
+    ],
+    "@containers/*": [
+      "src/app/shared/containers/*"
+    ],
+    "@features/*": [
+      "src/app/features/*"
+    ],
+    "@core/*": [
+      "src/app/core/*"
+    ],
+    "@assets/*": [
+      "src/assets/*"
+    ],
+    "@env/*": [
+      "src/environment/*"
     ]
   },
   "nxJsonPlugins": [],
@@ -274,11 +295,11 @@
       },
       {
         "file": "src/app/features/category/components/category-blogs/category-blogs.component.spec.ts",
-        "hash": "12100412297819658518"
+        "hash": "17818309257988690159"
       },
       {
         "file": "src/app/features/category/components/category-blogs/category-blogs.component.ts",
-        "hash": "2948590750468962382"
+        "hash": "13064441607730610773"
       },
       {
         "file": "src/app/features/category/components/category-intro/category-intro.component.html",
@@ -290,7 +311,7 @@
       },
       {
         "file": "src/app/features/category/components/category-intro/category-intro.component.spec.ts",
-        "hash": "13786868048067930887"
+        "hash": "5802282379921846779"
       },
       {
         "file": "src/app/features/category/components/category-intro/category-intro.component.ts",
@@ -334,7 +355,7 @@
       },
       {
         "file": "src/app/pages/categories/categories.component.ts",
-        "hash": "3391183831392260993"
+        "hash": "2882293830774532701"
       },
       {
         "file": "src/app/pages/default/default.component.html",
