@@ -12,7 +12,7 @@ import { CategoryStoreService } from "src/app/features/category/services/categor
 })
 export class DefaultHeaderComponent {
   private _categoriesStore = inject(CategoryStoreService);
-  protected categories: Category[] = [];
+  public categories: Category[] = [];
 
   constructor() {
     effect(() => {
