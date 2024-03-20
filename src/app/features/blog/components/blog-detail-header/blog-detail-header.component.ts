@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
+import { Blog } from "@features/blog/interfaces/blog.interface";
 
 @Component({
   selector: "app-blog-detail-header",
@@ -7,4 +8,6 @@ import { Component } from "@angular/core";
   templateUrl: "./blog-detail-header.component.html",
   styleUrl: "./blog-detail-header.component.scss",
 })
-export class BlogDetailHeaderComponent {}
+export class BlogDetailHeaderComponent {
+  blog = input<Blog>();
+}

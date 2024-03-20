@@ -15,7 +15,7 @@ export class BlogApiService {
   }
 
   getById(params?: { id: string }) {
-    return this._http.get(`${URL}/${params?.id}`);
+    return this._http.get<Blog>(`${URL}/${params?.id}`);
   }
 
   // update(params: { id: string }, body: CategoryUpdate) {

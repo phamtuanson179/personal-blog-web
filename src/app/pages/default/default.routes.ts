@@ -20,4 +20,11 @@ export const defaultRoutes: Routes = [
         (c) => c.CategoriesPageComponent
       ),
   },
+  {
+    path: "blogs/:blogId",
+    loadComponent: () =>
+      import("../blog-page/blog-page.component").then(
+        (c) => c.BlogPageComponent
+      ),
+  },
 ];

@@ -15,6 +15,10 @@ export class BlogFacadeService {
     return this._blogApiService.get(params);
   }
 
+  getById(params: { id: string }) {
+    return this._blogApiService.getById(params);
+  }
+
   mappingCategoriesToBlogGet(
     blog: BlogGetsResponse | Blog,
     categories: Category[]

@@ -1,3 +1,4 @@
 export interface BlogFilter {
-  categoryIds: string[];
+  categoryIds?: string[];
+  id?: string;
 }
