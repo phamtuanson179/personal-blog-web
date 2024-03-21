@@ -1,4 +1,5 @@
 import { Component, effect, inject, input } from "@angular/core";
+import { BlogAuthorComponent } from "@features/blog/components/blog-author/blog-author.component";
 import { BlogDetailContentComponent } from "@features/blog/components/blog-detail-content/blog-detail-content.component";
 import { BlogDetailHeaderComponent } from "@features/blog/components/blog-detail-header/blog-detail-header.component";
 import { BlogDetailSuggestionComponent } from "@features/blog/components/blog-detail-suggestion/blog-detail-suggestion.component";
@@ -12,6 +13,7 @@ import { BlogFacadeService } from "@features/blog/services/blog-facade.service";
     BlogDetailHeaderComponent,
     BlogDetailContentComponent,
     BlogDetailSuggestionComponent,
+    BlogAuthorComponent,
   ],
   templateUrl: "./blog-page.component.html",
   styleUrl: "./blog-page.component.scss",
